@@ -1,0 +1,129 @@
+<div class="app-container">
+  
+  <aside class="sidebar">
+    <h2>Gestão de Processos</h2>
+    <a routerLink="/novo-processo" class="btn-novo-sidebar">+ Novo Processo</a>
+    
+    <nav>
+       <small class="nav-section-title">Menu</small>
+       <a routerLink="/dashboard" class="nav-link">HomePage</a>
+       
+       <small class="nav-section-title">Listas</small>
+       <a routerLink="/lista/todos" class="nav-link">Todos</a>
+       <a routerLink="/lista/Novo" class="nav-link">Novos</a>
+       <a routerLink="/lista/Ativo" class="nav-link">Ativos</a>
+       <a routerLink="/lista/Concluído" class="nav-link">Concluídos</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    
+    <div class="top-right-actions">
+      <button (click)="exportarJSON()" class="btn-export">JSON</button>
+      <button (click)="exportarExcel()" class="btn-export">EXCEL</button>
+    </div>
+
+    <header style="margin-bottom: 30px;">
+      <h1>{{ nomeUsuario | saudacao }}</h1>
+      <div style="color: #666; font-weight: bold;">{{ dataDeHoje }}</div>
+    </header>
+
+    @if (router.url.includes('dashboard') || router.url === '/') {
+      <div class="dashboard-grid">
+        <div title="Total de processos" routerLink="/lista/todos" class="kpi-card" style="background: #1e88e5;">
+          <small>TOTAL</small><h2 style="font-size: 2.5rem; margin: 10px 0;">{{ total }}</h2>
+          <span>Abrir Todos →</span>
+        </div>
+        <div title="Ver novos" routerLink="/lista/Novo" class="kpi-card" style="background: #26a69a;">
+          <small>NOVOS</small><h2 style="font-size: 2.5rem; margin: 10px 0;">{{ novos }}</h2>
+          <span>Ver Novos →</span>
+        </div>
+        <div title="Ver ativos" routerLink="/lista/Ativo" class="kpi-card" style="background: #ffa726;">
+          <small>ATIVOS</small><h2 style="font-size: 2.5rem; margin: 10px 0;">{{ ativos }}</h2>
+          <span>Ver Ativos →</span>
+        </div>
+        <div title="Ver concluídos" routerLink="/lista/Concluído" class="kpi-card" style="background: #455a64;">
+          <small>CONCLUÍDOS</small><h2 style="font-size: 2.5rem; margin: 10px 0;">{{ concluidos }}</h2>
+          <span>Ver Concluídos →</span>
+        </div>
+      </div>
+    }
+
+    @if (router.url.includes('lista')) {
+      <div style="background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 20px;">
+        <div style="display: flex; gap: 15px; align-items: center;">
+          <input [(ngModel)]="termoPesquisa" type="text" placeholder="Pesquisar..." style="flex: 2; padding: 12px; border: 1px solid #ddd; border-radius: 10px;">
+
+          @if (router.url.endsWith('todos')) {
+            <select [(ngModel)]="filtroStatusLista" style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 10px; background: white;">
+              <option value="Todos">Todos os Status</option>
+              <option value="Novo">Novo</option>
+              <option value="Ativo">Ativo</option>
+              <option value="Concluído">Concluído</option>
+            </select>
+          }
+          <button routerLink="/dashboard" style="background: #eee; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer;">Voltar</button>
+        </div>
+      </div>
+
+      <div style="background: white; border-radius: 15px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 2px solid #f4f7f6; color: #666;">
+              <th style="padding: 15px;">Número</th>
+              <th style="padding: 15px;">Cliente</th>
+              <th style="padding: 15px;">Status</th>
+              <th style="padding: 15px;">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of listaFiltrada; track item.id) {
+              <tr style="border-bottom: 1px solid #f4f7f6;">
+                <td style="padding: 15px;">{{ item.numero }}</td>
+                <td style="padding: 15px;">{{ item.cliente }}</td>
+                <td style="padding: 15px;">
+                  <span style="padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; background: #eee;">{{ item.status }}</span>
+                </td>
+                <td style="padding: 15px;">
+                  <button (click)="iniciarEdicao(item)" style="border: none; background: #1e88e5; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer;">Editar</button>
+                  <button (click)="excluirProcesso(item.id)" style="border: none; background: #e53935; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer;">Excluir</button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+
+    @if (processoSendoEditado) {
+      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 100;">
+        <div style="background: white; padding: 30px; border-radius: 15px; width: 400px;">
+          <h3>Editar</h3>
+          <input [(ngModel)]="processoSendoEditado.cliente" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px;">
+          <input [(ngModel)]="processoSendoEditado.numero" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px;">
+          <select [(ngModel)]="processoSendoEditado.status" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; background: white;">
+            <option value="Novo">Novo</option>
+            <option value="Ativo">Ativo</option>
+            <option value="Concluído">Concluído</option>
+          </select>
+          <button (click)="atualizarProcesso()" style="width: 100%; background: #26a69a; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">Guardar</button>
+          <button (click)="cancelarEdicao()" style="width: 100%; background: #eee; margin-top: 5px; border: none; padding: 10px; border-radius: 8px; cursor: pointer; width: 100%;">Cancelar</button>
+        </div>
+      </div>
+    }
+
+    @if (router.url.includes('novo-processo')) {
+      <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 450px; margin: 0 auto;">
+        <h2>Novo Registo</h2>
+        <input #c type="text" placeholder="Cliente" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 15px;">
+        <input #n type="text" placeholder="Número" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 15px;">
+        <select #s style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px; background: white;">
+          <option value="Novo">Novo</option>
+          <option value="Ativo">Ativo</option>
+          <option value="Concluído">Concluído</option>
+        </select>
+        <button (click)="salvarProcesso(c.value, n.value, s.value)" style="width: 100%; background: #1e88e5; color: white; border: none; padding: 15px; border-radius: 12px; font-weight: bold; cursor: pointer;">Salvar</button>
+      </div>
+    }
+  </main>
+</div>

@@ -1,0 +1,108 @@
+/* Estrutura Geral */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #f4f7f6;
+}
+
+/* Barra Lateral */
+.sidebar {
+  width: 280px;
+  background-color: #1a237e;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.nav-section-title {
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin: 15px 0 5px 10px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-novo-sidebar {
+  background-color: #1e88e5;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+
+/* BOTÕES NO CANTO SUPERIOR DIREITO (Estilo Foto de Perfil) */
+.top-right-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.btn-export {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 20px; /* Redondinho como uma foto/avatar */
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1a237e;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.btn-export:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Estilo dos Cards KPI */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+}
