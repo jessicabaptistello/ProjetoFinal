@@ -1,0 +1,47 @@
+<div class="toolbar">
+  <input [(ngModel)]="termo" class="input" placeholder="Pesquisar por número, cliente ou tipo..." />
+
+  <select [(ngModel)]="filtroStatus" class="select">
+    <option value="Todos">Todos</option>
+    <option value="Novo">Novo</option>
+    <option value="Ativo">Ativo</option>
+    <option value="Concluído">Concluído</option>
+  </select>
+
+  <a routerLink="/novo-processo" class="btn">+ Novo</a>
+</div>
+
+<div class="card">
+  <table class="table">
+    <thead>
+      <tr>
+        <th (click)="setSort('numero')" class="th">Número{{ sortLabel('numero') }}</th>
+        <th (click)="setSort('cliente')" class="th">Cliente{{ sortLabel('cliente') }}</th>
+        <th (click)="setSort('tipo')" class="th">Tipo{{ sortLabel('tipo') }}</th>
+        <th (click)="setSort('status')" class="th">Status{{ sortLabel('status') }}</th>
+        <th class="th">Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of listaFiltrada" class="tr">
+        <td class="td">
+          <a [routerLink]="['/detalhe', item.id]" class="link">{{ item.numero }}</a>
+        </td>
+        <td class="td">{{ item.cliente }}</td>
+        <td class="td">{{ item.tipo }}</td>
+        <td class="td">
+          <span [ngClass]="statusClass(item.status)">{{ item.status }}</span>
+        </td>
+        <td class="td actions">
+          <a [routerLink]="['/editar', item.id]" class="btn small blue">Editar</a>
+          <button (click)="excluir(item.id)" class="btn small red">Excluir</button>
+        </td>
+      </tr>
+
+      <tr *ngIf="listaFiltrada.length === 0">
+        <td class="td" colspan="5">Nenhum processo encontrado.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

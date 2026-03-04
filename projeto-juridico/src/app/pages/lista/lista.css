@@ -1,0 +1,80 @@
+.toolbar{
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  flex-wrap: wrap;
+}
+
+.input{
+  flex: 2;
+  min-width: 220px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.select{
+  flex: 1;
+  min-width: 160px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+}
+
+.card{
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.table{ width:100%; border-collapse: collapse; text-align:left; }
+
+.th{
+  padding: 14px;
+  border-bottom: 2px solid #f4f7f6;
+  color:#666;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tr{ border-bottom: 1px solid #f4f7f6; }
+.td{ padding: 14px; }
+
+.link{ color:#1976d2; text-decoration:none; font-weight:900; }
+.link:hover{ text-decoration:underline; }
+
+.actions{ display:flex; gap: 8px; }
+
+.btn{
+  background:#1976d2;
+  color:white;
+  border:none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:900;
+}
+
+.btn.small{ padding: 6px 10px; border-radius: 8px; font-size: .85rem; }
+.btn.blue{ background:#1976d2; }
+.btn.red{ background:#e53935; }
+
+/* ===== Indicador visual (ngClass) ===== */
+.badge{
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  display: inline-block;
+}
+.novo { background: #e0f2f1; color: #00796b; }
+.ativo { background: #fff3e0; color: #ef6c00; }
+.concluido { background: #eceff1; color: #37474f; }

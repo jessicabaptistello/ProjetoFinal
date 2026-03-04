@@ -106,3 +106,15 @@
 .kpi-card:hover {
   transform: translateY(-5px);
 }
+
+.top-right-actions{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.today{
+  font-weight: 900;
+  color:#666;
+  margin-right: 8px;
+}

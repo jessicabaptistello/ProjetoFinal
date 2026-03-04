@@ -2,22 +2,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'saudacao',
-  // standalone: true
+  standalone: true,
 })
 export class SaudacaoPipe implements PipeTransform {
   transform(nome: string): string {
     const hora = new Date().getHours();
 
-    if (hora < 12) {
-      return `"bom dia", ${nome}`;
-    }
+    let msg = 'Bom dia';
+    if (hora >= 12 && hora < 18) msg = 'Boa tarde';
+    if (hora >= 18 || hora < 5) msg = 'Boa noite';
 
-    if (hora < 18) {
-      return `"bom tarde", ${nome}`;
-    }
-      return `"Boa noite", ${nome}`;
-    
-    }
+    return `${msg}, ${nome}`;
   }
-
-
+}
