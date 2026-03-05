@@ -6,7 +6,7 @@
   background: #ffffff;                              /* fundo branco */
   border-radius: 18px;                              /* arredondado */
   padding: 22px;                                    /* espaçamento interno */
-  box-shadow: 0 5px 15px rgba(15,23,42,0.06);        /* sombra soft (corrigida) */
+  box-shadow: 0 5px 15px #626262;        /* sombra soft (corrigida) */
 }
 
 /* Header do card: título + ações */
@@ -19,7 +19,7 @@
 }
 
 /* Texto “muted” (secundário) */
-.muted{ color:#64748b; font-weight:600; }
+.muted{ color:#A1A1A1; font-weight:600; }
 
 /* Grid interno (2 colunas) */
 .grid{
@@ -42,10 +42,10 @@
   border-radius: 10px;
   cursor:pointer;
   text-decoration:none;
-  color:#0f172a;               /* quase preto */
+  color:#000000;               /* quase preto */
   font-weight:700;
 }
 
 /* Botão azul (destaque) */
-.btn.blue{ background:#1e3a8a; color:#ffffff; }
+.btn.blue{ background:#626262; color:#ffffff; }
 

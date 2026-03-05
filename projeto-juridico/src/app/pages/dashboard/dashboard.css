@@ -64,10 +64,10 @@
 /* Mantém as cores “clássicas” e estáveis
    - Eu deixei em tons da mesma família (azul/escuro/cinza)
    - Você altera: background para variar o “tema” de cada KPI */
-.kpi-blue   { background: #1e3a8a; } /* azul escuro soft */
-.kpi-green  { background: #0f172a; } /* quase preto (chique) */
-.kpi-orange { background: #1f2937; } /* cinza escuro */
-.kpi-dark   { background: #334155; } /* cinza-azulado */
+.kpi-blue   { background: #C0C0C0; } /* azul escuro soft */
+.kpi-green  { background: #FFD2EC; } /* quase preto (chique) */
+.kpi-orange { background: #FFD2EC; } /* cinza escuro */
+.kpi-dark   { background: #FFD2EC; } /* cinza-azulado */
 
 
 /* =========================
@@ -144,9 +144,9 @@
 
 /* Cores dos dots (apenas azul/cinza/preto)
    - Você altera: background */
-.dot-green{ background:#0f172a; } /* substitui “verde” por escuro chique */
-.dot-blue { background:#2563eb; } /* azul */
-.dot-gray { background:#94a3b8; } /* cinza */
+.dot-green{ background:#FF2FA5; } /* substitui “verde” por escuro chique */
+.dot-blue { background:#FF80C9; } /* azul */
+.dot-gray { background:#8bddac; } /* cinza */ 
 
 /* Corpo do card (lista de itens)
    - Você altera: padding e gap */
@@ -185,9 +185,9 @@
   height: 44px;
   border-radius: 10px;
 }
-.bar-green{ background:#0f172a; }  /* escuro */
-.bar-blue { background:#2563eb; }  /* azul */
-.bar-gray { background:#94a3b8; }  /* cinza */
+.bar-green{ background:#FF2FA5; }  /* escuro */
+.bar-blue { background:#FF80C9; }  /* azul */
+.bar-gray { background:#8bddac; }  /* cinza */
 
 /* Conteúdo da linha
    - Visual: “cardzinho” claro */
@@ -201,13 +201,13 @@
 /* Título da linha */
 .row-title{
   font-weight: 900;
-  color: #0f172a;
+  color: #000000;
 }
 
 /* Subtexto da linha */
 .row-sub{
   margin-top: 4px;
-  color: #64748b;
+  color: #929292;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -215,7 +215,7 @@
 /* Link da linha (ação)
    - Você altera: cor do link */
 .row-link{
-  color: #2563eb;
+  color: #929292;
   font-weight: 900;
   text-decoration: none;
 }
@@ -237,7 +237,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #1e3a8a;          /* azul escuro soft */
+  background: #929292;          /* azul escuro soft */
   color: #ffffff;
   font-weight: 900;
   border-radius: 8px;
@@ -272,7 +272,7 @@
   font-weight: 900;
   font-size: 12px;
   background: #eaf2ff;          /* azul MUITO suave */
-  color: #1e3a8a;               /* azul escuro */
+  color: #626262;               /* azul escuro */
   cursor: default;
   line-height: 1;
 }
@@ -287,8 +287,8 @@
   width: 280px;
   max-width: calc(100vw - 60px);
 
-  background: #0f172a;          /* quase preto */
-  color: #f8fafc;               /* branco soft */
+  background: #FFD2EC;          /* quase preto */
+  color: #626262;               /* branco soft */
   padding: 10px 12px;
   border-radius: 10px;
   font-size: 0.85rem;
@@ -298,8 +298,7 @@
   pointer-events: none;         /* não atrapalha hover */
   transition: opacity .15s ease, transform .15s ease;
   z-index: 999;
-
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18); /* sombra sutil */
+  box-shadow: 0 12px 28px #DFDFDF; /* sombra sutil */
 }
 
 /* Setinha do tooltip */

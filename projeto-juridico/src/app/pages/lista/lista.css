@@ -7,7 +7,7 @@
   background: #ffffff;
   border-radius: 15px;
   padding: 18px;
-  box-shadow: 0 5px 15px rgba(15,23,42,0.06); /* corrigido */
+  box-shadow: 0 5px 15px #828282; /* corrigido */
   margin-bottom: 16px;
   display:flex;
   gap: 12px;
@@ -23,7 +23,7 @@
   border: 1px solid #e5e7eb;      /* borda visível suave */
   border-radius: 10px;
   background: #ffffff;
-  color: #0f172a;
+  color: #000000;
 }
 
 /* Select de filtro */
@@ -34,7 +34,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   background: #ffffff;            /* corrigido (antes estava inválido) */
-  color: #0f172a;
+  color: #000000;
 }
 
 /* Card container da tabela */
@@ -42,7 +42,7 @@
   background: #ffffff;            /* corrigido */
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(15,23,42,0.06); /* corrigido */
+  box-shadow: 0 5px 15px #828282; /* corrigido */
 }
 
 /* Tabela base */
@@ -52,7 +52,7 @@
 .th{
   padding: 14px;
   border-bottom: 2px solid #e5e7eb; /* separador suave */
-  color:#64748b;
+  color:#626262;
   cursor: pointer;
   user-select: none;
 }
@@ -62,7 +62,7 @@
 .td{ padding: 14px; }
 
 /* Link da tabela */
-.link{ color:#1e3a8a; text-decoration:none; font-weight:900; }
+.link{ color:#929292; text-decoration:none; font-weight:900; }
 .link:hover{ text-decoration:underline; }
 
 /* Ações na tabela */
@@ -70,7 +70,7 @@
 
 /* Botões na tabela */
 .btn{
-  background: #1e3a8a;
+  background: #C0C0C0;
   color:#ffffff;
   border:none;
   padding: 10px 14px;
@@ -84,8 +84,8 @@
 .btn.small{ padding: 6px 10px; border-radius: 8px; font-size: .85rem; }
 
 /* Variações (mantive, só deixei coerente na paleta) */
-.btn.blue{ background:#1e3a8a; }
-.btn.red { background:#0f172a; } /* “red” agora vira escuro (minimalista) */
+.btn.blue{ background:#FFD2EC; }
+.btn.red { background:#C0C0C0; } /* “red” agora vira escuro (minimalista) */
 
 /* ===== Indicador visual (ngClass) ===== */
 .badge{
@@ -95,6 +95,6 @@
   font-weight: 900;
   display: inline-block;
 }
-.novo      { background: #ffffff; color: #1e3a8a; }
-.ativo     { background: #ffffff; color: #334155; }
-.concluido { background: #ffffff; color: #0f172a; }
+.novo      { background: #ffffff; color: #FF2FA5; }
+.ativo     { background: #ffffff; color: #FF80C9; }
+.concluido { background: #ffffff; color: #8bddac; }

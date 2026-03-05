@@ -14,6 +14,6 @@
 /* Status
    - Fundo branco com texto azul/cinza suave (clean)
    - Você altera: color (texto) e background */
-.novo      { background: #ffffff; color: #2563eb; } /* azul vivo porém moderno */
-.ativo     { background: #ffffff; color: #1d4ed8; } /* azul um pouco mais fechado */
-.concluido { background: #ffffff; color: #0f172a; } /* quase preto (finalizado) */
+.novo      { background: #ffffff; color: #FF2FA5; } /* azul vivo porém moderno */
+.ativo     { background: #ffffff; color: #FF80C9; } /* azul um pouco mais fechado */
+.concluido { background: #ffffff; color: #8bddac; } /* quase preto (finalizado) */

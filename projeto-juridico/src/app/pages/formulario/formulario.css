@@ -5,7 +5,7 @@
   background: #ffffff;
   padding: 26px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(15,23,42,0.06); /* sombra premium */
+  box-shadow: 0 10px 30px #626262; /* sombra premium */
   max-width: 520px;
   margin: 0 auto;
 }
@@ -15,7 +15,7 @@ label{
   display:block;
   margin-top: 14px;
   font-weight: 800;
-  color:#0f172a;
+  color:#000000;
 }
 
 /* Inputs e selects */
@@ -27,18 +27,18 @@ input, select, textarea{
   margin-top: 6px;
   background: #ffffff;
   resize: vertical;
-  color: #0f172a;
+  color: #000000;
 }
 
 /* Campo inválido */
 .invalid{
-  border-color: #64748b !important;               /* cinza mais forte (sem vermelho) */
-  box-shadow: 0 0 0 2px rgba(100,116,139,0.12);   /* halo soft */
+  border-color: #d11616 !important;               /* cinza mais forte (sem vermelho) */
+  box-shadow: 0 0 0 2px #626262;   /* halo soft */
 }
 
 /* Mensagem de erro (mantive estrutura, mas em tom neutro/chique) */
 .error{
-  color:#0f172a;             /* quase preto (sem vermelho) */
+  color:#d11616;             /* quase preto (sem vermelho) */
   font-weight: 700;
   display:block;
   margin-top: 6px;
@@ -54,13 +54,13 @@ input, select, textarea{
 
 /* Botão base do form */
 .btn{
-  background:#f1f5f9;        /* cinza claro */
+  background:#DFDFDF;        /* cinza claro */
   border:none;
   padding: 12px 14px;
   border-radius: 12px;
   cursor:pointer;
   text-decoration:none;
-  color:#0f172a;
+  color:#000000;
   font-weight:800;
   flex:1;
   text-align:center;
@@ -68,7 +68,15 @@ input, select, textarea{
 
 /* Botão azul do form */
 .btn.blue{
-  background:#1e3a8a;
-  color:#ffffff;
+ background:#DFDFDF;        /* cinza claro */
+  border:none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#000000;
+  font-weight:800;
+  flex:1;
+  text-align:center;
 }
 

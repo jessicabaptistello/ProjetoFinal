@@ -6,14 +6,14 @@
 .app-container {
   display: flex;
   min-height: 100vh;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;      /* fundo geral branco */
 }
 
 /* MENU LATERAL */
 .sidebar {
   width: 280px;
-  background-color: #0f172a;      /* quase preto (muito chique) */
+  background-color: #FFD2EC;      /* quase preto (muito chique) */
   color: #f8fafc;                 /* texto branco soft */
   padding: 20px;
   display: flex;
@@ -48,12 +48,12 @@
 
 /* Hover do link do menu */
 .nav-link:hover {
-  background: rgba(248, 250, 252, 0.08); /* hover bem leve */
+  background: #DFDFDF; /* hover bem leve */
 }
 
 /* Botão “novo” no sidebar */
 .btn-novo-sidebar {
-  background-color: #1e3a8a;      /* azul escuro */
+  background-color: #C0C0C0;      /* azul escuro */
   color: #ffffff;
   text-decoration: none;
   padding: 12px;
@@ -89,8 +89,8 @@
   cursor: pointer;
   font-size: 0.75rem;
   font-weight: bold;
-  color: #334155;                 /* cinza-azulado */
-  box-shadow: 0 2px 8px rgba(15,23,42,0.08);
+  color: #C0C0C0;                
+  box-shadow: 0 2px 8px #626262;
   transition: 0.2s;
 }
 
@@ -140,7 +140,7 @@
 select {
   background-color: #ffffff;
   color: #0f172a;
-  border: 2px solid #cbd5e1;      /* cinza suave (sem azul gritante) */
+  border: 2px solid #828282;      /* cinza suave (sem azul gritante) */
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 14px;
@@ -150,11 +150,11 @@ select {
 /* opção */
 select option {
   background-color: #ffffff;
-  color: #0f172a;
+  color: #000000;
 }
 
 /* hover opção (nem todos browsers aplicam) */
 select option:hover {
-  background-color: #1e3a8a;      /* azul escuro */
+  background-color: #DFDFDF;      /* azul escuro */
   color: #ffffff;
 }
