@@ -22,6 +22,18 @@
     </select>
     <small class="error" *ngIf="campoInvalido('status')">Status é obrigatório.</small>
 
+    <!-- ✅ NOVO: descrição -->
+    <label>Descrição *</label>
+    <textarea
+      formControlName="descricao"
+      [class.invalid]="campoInvalido('descricao')"
+      rows="4"
+      placeholder="Descreva brevemente o processo..."
+    ></textarea>
+    <small class="error" *ngIf="campoInvalido('descricao')">
+      Descrição é obrigatória (mín. 10 caracteres).
+    </small>
+
     <div class="actions">
       <button type="submit" class="btn blue">{{ editId ? 'Guardar' : 'Criar' }}</button>
       <a class="btn" routerLink="/lista">Cancelar</a>

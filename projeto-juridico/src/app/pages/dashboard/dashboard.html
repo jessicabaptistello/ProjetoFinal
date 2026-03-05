@@ -1,1 +1,135 @@
-<p>dashboard works!</p>
+<section class="kpi-row">
+  <div class="kpi kpi-blue">
+    <div class="kpi-title">TOTAL DE PROCESSOS</div>
+    <div class="kpi-value">{{ total }}</div>
+    <div class="kpi-sub">Soma total registada</div>
+  </div>
+
+  <div class="kpi kpi-green">
+    <div class="kpi-title">NOVOS PROCESSOS</div>
+    <div class="kpi-value">{{ novos }}</div>
+    <div class="kpi-sub">Aguardando triagem</div>
+  </div>
+
+  <div class="kpi kpi-orange">
+    <div class="kpi-title">PROCESSOS ATIVOS</div>
+    <div class="kpi-value">{{ ativos }}</div>
+    <div class="kpi-sub">Em andamento</div>
+  </div>
+
+  <div class="kpi kpi-dark">
+    <div class="kpi-title">CONCLUÍDOS</div>
+    <div class="kpi-value">{{ concluidos }}</div>
+    <div class="kpi-sub">Finalizados</div>
+  </div>
+</section>
+
+<section class="columns">
+  <!-- NOVOS -->
+  <article class="col-card">
+    <header class="col-header">
+      <div class="col-left">
+        <span class="dot dot-green"></span>
+        <h3>Novos</h3>
+
+        <span class="tip">
+          <span class="tip-icon">i</span>
+          <span class="tip-bubble">Processos recém-criados e ainda não iniciados.</span>
+        </span>
+      </div>
+
+      <div class="col-right">Recentes</div>
+    </header>
+
+    <div class="col-body">
+      <div class="empty" *ngIf="processosNovos.length === 0">Sem processos novos.</div>
+
+      <div class="row" *ngFor="let p of processosNovos | slice:0:3">
+        <div class="bar bar-green"></div>
+        <div class="row-content">
+          <div class="row-title">Processo #{{ p.numero }}</div>
+          <div class="row-sub">
+            {{ p.tipo }} — {{ p.cliente }} · {{ p.descricao | slice:0:50 }}{{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+          </div>
+        </div>
+        <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
+      </div>
+    </div>
+
+    <footer class="col-footer">
+      <a class="btn-lista" [routerLink]="['/lista']" [queryParams]="{ status: 'Novo' }">Ver Lista →</a>
+    </footer>
+  </article>
+
+  <!-- ATIVOS -->
+  <article class="col-card">
+    <header class="col-header">
+      <div class="col-left">
+        <span class="dot dot-blue"></span>
+        <h3>Ativos</h3>
+
+        <span class="tip">
+          <span class="tip-icon">i</span>
+          <span class="tip-bubble">Processos em andamento (em análise, audiências, prazos, etc.).</span>
+        </span>
+      </div>
+
+      <div class="col-right">Em curso</div>
+    </header>
+
+    <div class="col-body">
+      <div class="empty" *ngIf="processosAtivos.length === 0">Sem processos ativos.</div>
+
+      <div class="row" *ngFor="let p of processosAtivos | slice:0:3">
+        <div class="bar bar-blue"></div>
+        <div class="row-content">
+          <div class="row-title">Processo #{{ p.numero }}</div>
+          <div class="row-sub">
+            {{ p.tipo }} — {{ p.cliente }} · {{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+          </div>
+        </div>
+        <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
+      </div>
+    </div>
+
+    <footer class="col-footer">
+      <a class="btn-lista" [routerLink]="['/lista']" [queryParams]="{ status: 'Ativo' }">Ver Lista →</a>
+    </footer>
+  </article>
+
+  <!-- CONCLUÍDOS -->
+  <article class="col-card">
+    <header class="col-header">
+      <div class="col-left">
+        <span class="dot dot-gray"></span>
+        <h3>Concluídos</h3>
+
+        <span class="tip">
+          <span class="tip-icon">i</span>
+          <span class="tip-bubble">Processos finalizados e encerrados.</span>
+        </span>
+      </div>
+
+      <div class="col-right">Finalizados</div>
+    </header>
+
+    <div class="col-body">
+      <div class="empty" *ngIf="processosConcluidos.length === 0">Sem processos concluídos.</div>
+
+      <div class="row" *ngFor="let p of processosConcluidos | slice:0:3">
+        <div class="bar bar-gray"></div>
+        <div class="row-content">
+          <div class="row-title">Processo #{{ p.numero }}</div>
+          <div class="row-sub">
+            {{ p.tipo }} — {{ p.cliente }} · {{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+          </div>
+        </div>
+        <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
+      </div>
+    </div>
+
+    <footer class="col-footer">
+      <a class="btn-lista" [routerLink]="['/lista']" [queryParams]="{ status: 'Concluído' }">Ver Lista →</a>
+    </footer>
+  </article>
+</section>

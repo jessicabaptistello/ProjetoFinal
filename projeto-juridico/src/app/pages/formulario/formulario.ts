@@ -1,7 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, ReactiveFormsModule, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import {
+  FormBuilder,
+  ReactiveFormsModule,
+  Validators,
+  AbstractControl,
+  ValidationErrors,
+} from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+
 import { ProcessoService } from '../../processo.service';
 import { Processo, StatusProcesso, TipoProcesso } from '../../processo.model';
 
@@ -29,11 +36,13 @@ export class FormularioPageComponent {
   readonly tipos: TipoProcesso[] = ['Cível', 'Criminal', 'Trabalhista', 'Família', 'Fiscal', 'Outro'];
   readonly status: StatusProcesso[] = ['Novo', 'Ativo', 'Concluído'];
 
+  // ✅ inclui descricao
   readonly form = this.fb.nonNullable.group({
-    cliente: ['', [Validators.required, Validators.minLength(3)]],    // required #1
-    numero: ['', [Validators.required, numeroProcessoValidator]],     // required #2 + custom
-    tipo: ['Cível' as TipoProcesso, [Validators.required]],           // required #3
+    cliente: ['', [Validators.required, Validators.minLength(3)]],
+    numero: ['', [Validators.required, numeroProcessoValidator]],
+    tipo: ['Cível' as TipoProcesso, [Validators.required]],
     status: ['Novo' as StatusProcesso, [Validators.required]],
+    descricao: ['', [Validators.required, Validators.minLength(10)]],
   });
 
   constructor() {
@@ -43,7 +52,9 @@ export class FormularioPageComponent {
     }
   }
 
-  get f() { return this.form.controls; }
+  get f() {
+    return this.form.controls;
+  }
 
   campoInvalido(nome: keyof typeof this.form.controls) {
     const c = this.form.controls[nome];
@@ -62,7 +73,6 @@ export class FormularioPageComponent {
   submit() {
     const numero = this.form.value.numero?.trim() ?? '';
 
-    // validação custom adicional: número não pode repetir
     if (this.processoService.numeroExiste(numero, this.editId ?? undefined)) {
       this.f.numero.setErrors({ ...(this.f.numero.errors ?? {}), duplicado: true });
     }
@@ -72,6 +82,7 @@ export class FormularioPageComponent {
       return;
     }
 
+    // payload agora TEM descricao
     const payload = this.form.getRawValue();
 
     if (this.editId) {

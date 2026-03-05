@@ -1,45 +1,74 @@
+/* =========================================================
+   CARD (2) - card formulário central
+   ========================================================= */
 .card{
-  background: white;
+  background: #ffffff;
   padding: 26px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.06); /* sombra premium */
   max-width: 520px;
   margin: 0 auto;
 }
-label{ display:block; margin-top: 14px; font-weight: 800; color:#333; }
-input, select{
+
+/* Label de formulário */
+label{
+  display:block;
+  margin-top: 14px;
+  font-weight: 800;
+  color:#0f172a;
+}
+
+/* Inputs e selects */
+input, select, textarea{
   width: 100%;
   padding: 12px;
-  border: 1px solid #eee;
+  border: 1px solid #e5e7eb;   /* borda cinza suave */
   border-radius: 12px;
   margin-top: 6px;
-  background: white;
+  background: #ffffff;
+  resize: vertical;
+  color: #0f172a;
 }
+
+/* Campo inválido */
 .invalid{
-  border-color: #e53935 !important;
-  box-shadow: 0 0 0 2px rgba(229,57,53,0.08);
+  border-color: #64748b !important;               /* cinza mais forte (sem vermelho) */
+  box-shadow: 0 0 0 2px rgba(100,116,139,0.12);   /* halo soft */
 }
+
+/* Mensagem de erro (mantive estrutura, mas em tom neutro/chique) */
 .error{
-  color:#e53935;
+  color:#0f172a;             /* quase preto (sem vermelho) */
   font-weight: 700;
   display:block;
   margin-top: 6px;
+  opacity: .75;              /* deixa com cara de “hint” */
 }
+
+/* Ações do form */
 .actions{
   display:flex;
   gap: 10px;
   margin-top: 18px;
 }
+
+/* Botão base do form */
 .btn{
-  background:#eee;
+  background:#f1f5f9;        /* cinza claro */
   border:none;
   padding: 12px 14px;
   border-radius: 12px;
   cursor:pointer;
   text-decoration:none;
-  color:#222;
+  color:#0f172a;
   font-weight:800;
   flex:1;
   text-align:center;
 }
-.btn.blue{ background:#1e88e5; color:white; }
+
+/* Botão azul do form */
+.btn.blue{
+  background:#1e3a8a;
+  color:#ffffff;
+}
+

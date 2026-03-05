@@ -1,8 +1,13 @@
+/* =========================================================
+   TOOLBAR + TABELA (lista/filtro)
+   ========================================================= */
+
+/* Barra superior com filtros */
 .toolbar{
-  background: white;
+  background: #ffffff;
   border-radius: 15px;
   padding: 18px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(15,23,42,0.06); /* corrigido */
   margin-bottom: 16px;
   display:flex;
   gap: 12px;
@@ -10,51 +15,63 @@
   flex-wrap: wrap;
 }
 
+/* Input de busca */
 .input{
   flex: 2;
   min-width: 220px;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;      /* borda visível suave */
   border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
 }
 
+/* Select de filtro */
 .select{
   flex: 1;
   min-width: 160px;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
-  background: white;
+  background: #ffffff;            /* corrigido (antes estava inválido) */
+  color: #0f172a;
 }
 
+/* Card container da tabela */
 .card{
-  background: white;
+  background: #ffffff;            /* corrigido */
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(15,23,42,0.06); /* corrigido */
 }
 
+/* Tabela base */
 .table{ width:100%; border-collapse: collapse; text-align:left; }
 
+/* Cabeçalho da tabela */
 .th{
   padding: 14px;
-  border-bottom: 2px solid #f4f7f6;
-  color:#666;
+  border-bottom: 2px solid #e5e7eb; /* separador suave */
+  color:#64748b;
   cursor: pointer;
   user-select: none;
 }
 
-.tr{ border-bottom: 1px solid #f4f7f6; }
+/* Linhas */
+.tr{ border-bottom: 1px solid #f1f5f9; }
 .td{ padding: 14px; }
 
-.link{ color:#1976d2; text-decoration:none; font-weight:900; }
+/* Link da tabela */
+.link{ color:#1e3a8a; text-decoration:none; font-weight:900; }
 .link:hover{ text-decoration:underline; }
 
+/* Ações na tabela */
 .actions{ display:flex; gap: 8px; }
 
+/* Botões na tabela */
 .btn{
-  background:#1976d2;
-  color:white;
+  background: #1e3a8a;
+  color:#ffffff;
   border:none;
   padding: 10px 14px;
   border-radius: 10px;
@@ -63,9 +80,12 @@
   font-weight:900;
 }
 
+/* Botão pequeno */
 .btn.small{ padding: 6px 10px; border-radius: 8px; font-size: .85rem; }
-.btn.blue{ background:#1976d2; }
-.btn.red{ background:#e53935; }
+
+/* Variações (mantive, só deixei coerente na paleta) */
+.btn.blue{ background:#1e3a8a; }
+.btn.red { background:#0f172a; } /* “red” agora vira escuro (minimalista) */
 
 /* ===== Indicador visual (ngClass) ===== */
 .badge{
@@ -75,6 +95,6 @@
   font-weight: 900;
   display: inline-block;
 }
-.novo { background: #e0f2f1; color: #00796b; }
-.ativo { background: #fff3e0; color: #ef6c00; }
-.concluido { background: #eceff1; color: #37474f; }
+.novo      { background: #ffffff; color: #1e3a8a; }
+.ativo     { background: #ffffff; color: #334155; }
+.concluido { background: #ffffff; color: #0f172a; }

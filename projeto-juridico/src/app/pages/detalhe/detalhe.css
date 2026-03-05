@@ -1,9 +1,15 @@
+
+/* =========================================================
+   CARD (1) - card genérico com header/grid/botões
+   ========================================================= */
 .card{
-  background: white;
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background: #ffffff;                              /* fundo branco */
+  border-radius: 18px;                              /* arredondado */
+  padding: 22px;                                    /* espaçamento interno */
+  box-shadow: 0 5px 15px rgba(15,23,42,0.06);        /* sombra soft (corrigida) */
 }
+
+/* Header do card: título + ações */
 .header{
   display:flex;
   justify-content: space-between;
@@ -11,7 +17,11 @@
   gap: 12px;
   margin-bottom: 16px;
 }
-.muted{ color:#666; font-weight:600; }
+
+/* Texto “muted” (secundário) */
+.muted{ color:#64748b; font-weight:600; }
+
+/* Grid interno (2 colunas) */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -20,15 +30,22 @@
 @media (max-width: 700px){
   .grid{ grid-template-columns: 1fr; }
 }
+
+/* Área de ações (botões lado a lado) */
 .actions{ display:flex; gap: 10px; }
+
+/* Botão base (versão clara) */
 .btn{
-  background:#eee;
+  background:#f8fafc;          /* cinza bem claro */
   border:none;
   padding: 10px 14px;
   border-radius: 10px;
   cursor:pointer;
   text-decoration:none;
-  color:#222;
+  color:#0f172a;               /* quase preto */
   font-weight:700;
 }
-.btn.blue{ background:#1e88e5; color:white; }
+
+/* Botão azul (destaque) */
+.btn.blue{ background:#1e3a8a; color:#ffffff; }
+

@@ -1,37 +1,44 @@
+/* =========================================================
+   LAYOUT GERAL (sidebar + main)
+   ========================================================= */
+
 /* Estrutura Geral */
 .app-container {
   display: flex;
   min-height: 100vh;
-  font-family: sans-serif;
-  background-color: #f4f7f6;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ffffff;      /* fundo geral branco */
 }
 
-/* Barra Lateral */
+/* MENU LATERAL */
 .sidebar {
   width: 280px;
-  background-color: #1a237e;
-  color: white;
+  background-color: #0f172a;      /* quase preto (muito chique) */
+  color: #f8fafc;                 /* texto branco soft */
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* TÍTULO DO MENU LATERAL */
 .sidebar h2 {
   font-size: 1.1rem;
-  opacity: 0.8;
+  opacity: 0.85;                  /* deixa mais elegante */
   margin-bottom: 20px;
 }
 
+/* Título de seção */
 .nav-section-title {
-  opacity: 0.5;
+  opacity: 0.55;
   text-transform: uppercase;
   font-size: 0.7rem;
   margin: 15px 0 5px 10px;
 }
 
+/* Links do menu */
 .nav-link {
-  color: white;
+  color: #f8fafc;
   text-decoration: none;
   display: block;
   padding: 12px;
@@ -39,13 +46,15 @@
   transition: 0.3s;
 }
 
+/* Hover do link do menu */
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(248, 250, 252, 0.08); /* hover bem leve */
 }
 
+/* Botão “novo” no sidebar */
 .btn-novo-sidebar {
-  background-color: #1e88e5;
-  color: white;
+  background-color: #1e3a8a;      /* azul escuro */
+  color: #ffffff;
   text-decoration: none;
   padding: 12px;
   border-radius: 8px;
@@ -58,9 +67,10 @@
   flex: 1;
   padding: 40px;
   position: relative;
+  background: #ffffff;           /* garante fundo branco */
 }
 
-/* BOTÕES NO CANTO SUPERIOR DIREITO (Estilo Foto de Perfil) */
+/* BOTÕES NO CANTO SUPERIOR DIREITO */
 .top-right-actions {
   position: absolute;
   top: 20px;
@@ -70,51 +80,81 @@
   z-index: 10;
 }
 
+/* Botão export */
 .btn-export {
-  background: white;
-  border: 1px solid #ddd;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   padding: 8px 15px;
-  border-radius: 20px; /* Redondinho como uma foto/avatar */
+  border-radius: 20px;
   cursor: pointer;
   font-size: 0.75rem;
   font-weight: bold;
-  color: #1a237e;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #334155;                 /* cinza-azulado */
+  box-shadow: 0 2px 8px rgba(15,23,42,0.08);
   transition: 0.2s;
 }
 
+/* Hover export */
 .btn-export:hover {
-  background: #f0f0f0;
+  background: #f8fafc;
   transform: scale(1.05);
 }
 
-/* Estilo dos Cards KPI */
+/* Grid dos KPIs */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
+/* Card KPI (versão do dashboard) */
 .kpi-card {
   padding: 25px;
   border-radius: 12px;
   cursor: pointer;
-  color: white;
+  color: #f8fafc;                 /* branco soft */
   transition: 0.3s;
 }
 
+/* Hover KPI */
 .kpi-card:hover {
   transform: translateY(-5px);
 }
 
+/* Bloco de ações + data */
 .top-right-actions{
   display:flex;
   align-items:center;
   gap: 10px;
   justify-content: flex-end;
 }
+
+/* Texto “hoje” */
 .today{
   font-weight: 900;
-  color:#666;
+  color:#64748b;
   margin-right: 8px;
+}
+
+/* Select global (dropdown) */
+select {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 2px solid #cbd5e1;      /* cinza suave (sem azul gritante) */
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* opção */
+select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* hover opção (nem todos browsers aplicam) */
+select option:hover {
+  background-color: #1e3a8a;      /* azul escuro */
+  color: #ffffff;
 }

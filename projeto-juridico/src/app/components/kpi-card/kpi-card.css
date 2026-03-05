@@ -1,14 +1,36 @@
+/* =========================================================
+   KPI CARD (cards clicáveis de KPI)
+   - Visual: card arredondado, com padding e texto branco
+   - Você altera: border-radius, padding, cor do texto
+   ========================================================= */
 .kpi-card {
-  color: white;
-  border-radius: 18px;
-  padding: 18px;
-  display: block;
-  text-decoration: none;
+  color: #f8fafc;                 /* texto claro (soft) em cima de fundo escuro */
+  border-radius: 18px;            /* arredondamento do card */
+  padding: 18px;                  /* espaçamento interno */
+  display: block;                 /* faz o card ocupar largura como bloco */
+  text-decoration: none;          /* remove sublinhado de links */
 }
-.kpi-card h2 { font-size: 2.5rem; margin: 10px 0; }
-.kpi-card span { opacity: .9; font-weight: 600; }
 
-.bg-blue { background:#1e88e5; }
-.bg-green { background:#26a69a; }
-.bg-orange { background:#ffa726; }
-.bg-gray { background:#455a64; }
+/* Título do KPI dentro do card
+   - Você altera: font-size e margin */
+.kpi-card h2 { 
+  font-size: 2.5rem; 
+  margin: 10px 0; 
+}
+
+/* Texto auxiliar no KPI
+   - Você altera: opacity e font-weight */
+.kpi-card span { 
+  opacity: .9; 
+  font-weight: 600; 
+}
+
+/* =========================================================
+   BACKGROUNDS (classes utilitárias de fundo)
+   - Paleta: azul/escuro suave + variações em cinza-azulado
+   - Você altera: background para outros tons
+   ========================================================= */
+.bg-blue   { background: #1e3a8a; }  /* azul escuro elegante */
+.bg-green  { background: #1f2937; }  /* cinza escuro (mantém “seriedade”) */
+.bg-orange { background: #111827; }  /* quase preto (minimalista) */
+.bg-gray   { background: #334155; }  /* cinza-azulado */

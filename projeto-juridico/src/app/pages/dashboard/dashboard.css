@@ -1,0 +1,321 @@
+/* =========================
+   KPIs (não mexer no tema)
+   ========================= */
+
+/* Linha de KPIs em grid responsivo
+   - Você altera: gap e quantidade de colunas */
+.kpi-row{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 1200px){
+  .kpi-row{ grid-template-columns: repeat(2, 1fr); } /* 2 colunas em telas médias */
+}
+@media (max-width: 650px){
+  .kpi-row{ grid-template-columns: 1fr; }            /* 1 coluna no mobile */
+}
+
+/* KPI individual
+   - Visual: card flex vertical com fundo sólido
+   - Você altera: padding, radius, cor do texto */
+.kpi{
+  border-radius: 10px;
+  padding: 22px 24px;
+  color: #f8fafc;                 /* branco soft */
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* “blindagem” para não pegar estilos estranhos globais */
+  background-clip: padding-box;
+}
+
+/* Título do KPI
+   - Você altera: font-size, letter-spacing, opacity */
+.kpi-title{
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Valor grande do KPI
+   - Você altera: font-size e font-weight */
+.kpi-value{
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Subtexto do KPI
+   - Você altera: opacity e font-size */
+.kpi-sub{
+  margin-top: 8px;
+  font-weight: 700;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+/* Mantém as cores “clássicas” e estáveis
+   - Eu deixei em tons da mesma família (azul/escuro/cinza)
+   - Você altera: background para variar o “tema” de cada KPI */
+.kpi-blue   { background: #1e3a8a; } /* azul escuro soft */
+.kpi-green  { background: #0f172a; } /* quase preto (chique) */
+.kpi-orange { background: #1f2937; } /* cinza escuro */
+.kpi-dark   { background: #334155; } /* cinza-azulado */
+
+
+/* =========================
+   3 colunas
+   ========================= */
+
+/* Container de colunas
+   - Você altera: gap e número de colunas */
+.columns{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+@media (max-width: 1200px){
+  .columns{ grid-template-columns: 1fr; } /* vira 1 coluna em telas menores */
+}
+
+/* Card de coluna (container)
+   - Visual: branco, borda leve, arredondado
+   - Você altera: border, background, radius, min-height */
+.col-card{
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;      /* cinza claro, mais “premium” */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+}
+
+/* Cabeçalho do card
+   - Você altera: padding e borda */
+.col-header{
+  padding: 18px 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb; /* separador suave */
+}
+
+/* Lado esquerdo do header (ícone + título)
+   - Você altera: gap */
+.col-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Título do header
+   - Você altera: cor e tamanho */
+.col-left h3{
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #0f172a;                /* preto-azulado (moderno) */
+}
+
+/* Contador / texto à direita
+   - Você altera: cor e font-size */
+.col-right{
+  color: #64748b;                /* cinza frio */
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* “Dot” (bolinha colorida)
+   - Você altera: tamanho e cor por classe */
+.dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Cores dos dots (apenas azul/cinza/preto)
+   - Você altera: background */
+.dot-green{ background:#0f172a; } /* substitui “verde” por escuro chique */
+.dot-blue { background:#2563eb; } /* azul */
+.dot-gray { background:#94a3b8; } /* cinza */
+
+/* Corpo do card (lista de itens)
+   - Você altera: padding e gap */
+.col-body{
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+/* Estado vazio
+   - Visual: fundo cinza bem leve com borda tracejada */
+.empty{
+  background: #f8fafc;
+  border: 1px dashed #e2e8f0;
+  color: #64748b;
+  font-weight: 800;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* Linha com barra lateral, conteúdo e link/ação
+   - Você altera: grid-template-columns e gap */
+.row{
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Barra vertical (cor por classe)
+   - Você altera: altura e cor */
+.bar{
+  width: 4px;
+  height: 44px;
+  border-radius: 10px;
+}
+.bar-green{ background:#0f172a; }  /* escuro */
+.bar-blue { background:#2563eb; }  /* azul */
+.bar-gray { background:#94a3b8; }  /* cinza */
+
+/* Conteúdo da linha
+   - Visual: “cardzinho” claro */
+.row-content{
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+/* Título da linha */
+.row-title{
+  font-weight: 900;
+  color: #0f172a;
+}
+
+/* Subtexto da linha */
+.row-sub{
+  margin-top: 4px;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Link da linha (ação)
+   - Você altera: cor do link */
+.row-link{
+  color: #2563eb;
+  font-weight: 900;
+  text-decoration: none;
+}
+.row-link:hover{ text-decoration: underline; }
+
+/* Rodapé do card (área do botão) */
+.col-footer{
+  padding: 16px 18px 18px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+}
+
+/* Botão principal */
+.btn-lista{
+  width: 80%;
+  max-width: 320px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1e3a8a;          /* azul escuro soft */
+  color: #ffffff;
+  font-weight: 900;
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* =========================
+   TOOLTIP (corrigido)
+   - balão centralizado no ícone
+   - setinha central
+   - não "entorta"
+   ========================= */
+
+/* Container do tooltip (posicionamento relativo) */
+.tip{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+}
+
+/* Ícone do tooltip (bolinha com “i”) */
+.tip-icon{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 12px;
+  background: #eaf2ff;          /* azul MUITO suave */
+  color: #1e3a8a;               /* azul escuro */
+  cursor: default;
+  line-height: 1;
+}
+
+/* Balão do tooltip */
+.tip-bubble{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 280px;
+  max-width: calc(100vw - 60px);
+
+  background: #0f172a;          /* quase preto */
+  color: #f8fafc;               /* branco soft */
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  opacity: 0;                   /* escondido por padrão */
+  pointer-events: none;         /* não atrapalha hover */
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 999;
+
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18); /* sombra sutil */
+}
+
+/* Setinha do tooltip */
+.tip-bubble::before{
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 7px 7px 7px;
+  border-style: solid;
+  border-color: transparent transparent #0f172a transparent;
+}
+
+/* Hover que mostra o tooltip */
+.tip:hover .tip-bubble{
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}

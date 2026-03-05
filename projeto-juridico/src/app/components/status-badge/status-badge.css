@@ -1,10 +1,19 @@
+/* =========================================================
+   BADGE (etiquetas de status)
+   - Visual: pílula arredondada, fonte pequena e forte
+   - Você altera: padding, radius, tamanho da fonte
+   ========================================================= */
 .badge {
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  display: inline-block;
+  padding: 6px 12px;             /* espaço interno */
+  border-radius: 20px;           /* formato “pílula” */
+  font-size: 0.75rem;            /* tamanho menor */
+  font-weight: 700;              /* destaque */
+  display: inline-block;         /* não quebra linha inteira */
 }
-.novo { background: #e0f2f1; color: #00796b; }
-.ativo { background: #fff3e0; color: #ef6c00; }
-.concluido { background: #eceff1; color: #37474f; }
+
+/* Status
+   - Fundo branco com texto azul/cinza suave (clean)
+   - Você altera: color (texto) e background */
+.novo      { background: #ffffff; color: #2563eb; } /* azul vivo porém moderno */
+.ativo     { background: #ffffff; color: #1d4ed8; } /* azul um pouco mais fechado */
+.concluido { background: #ffffff; color: #0f172a; } /* quase preto (finalizado) */
