@@ -46,7 +46,7 @@ export class ProcessoService {
         tipo: 'Criminal',
         status: 'Ativo',
         descricao: 'Processo em andamento com prazos e diligências.',
-        criadoEm: new Date().toISOString(),
+        criadoEm: new Date().toISOString(), 
       },
       {
         id: 3,
@@ -55,7 +55,7 @@ export class ProcessoService {
         tipo: 'Trabalhista',
         status: 'Concluído',
         descricao: 'Processo finalizado e encerrado após decisão.',
-        criadoEm: new Date().toISOString(),
+       criadoEm: new Date().toISOString(), 
       },
     ];
 

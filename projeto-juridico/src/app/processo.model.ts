@@ -1,4 +1,5 @@
 export type StatusProcesso = 'Novo' | 'Ativo' | 'Concluído';
+
 export type TipoProcesso =
   | 'Cível'
   | 'Criminal'
@@ -14,8 +15,10 @@ export interface Processo {
   tipo: TipoProcesso;
   status: StatusProcesso;
 
-  // ✅ ADICIONA ISTO
+
   descricao: string;
 
-  criadoEm: string; // ISO
-}
+
+  criadoEm: string;
+
+} 

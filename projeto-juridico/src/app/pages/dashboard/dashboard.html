@@ -49,7 +49,7 @@
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">
-            {{ p.tipo }} — {{ p.cliente }} · {{ p.descricao | slice:0:50 }}{{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+            {{ p.tipo }} — {{ p.cliente }}
           </div>
         </div>
         <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
@@ -85,7 +85,7 @@
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">
-            {{ p.tipo }} — {{ p.cliente }} · {{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+            {{ p.tipo }} — {{ p.cliente }} 
           </div>
         </div>
         <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
@@ -121,7 +121,7 @@
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">
-            {{ p.tipo }} — {{ p.cliente }} · {{ (p.descricao || '') | slice:0:50 }}{{ (p.descricao || '').length > 50 ? '...' : '' }}
+            {{ p.tipo }} — {{ p.cliente }} 
           </div>
         </div>
         <a class="row-link" [routerLink]="['/detalhe', p.id]">Detalhe</a>
