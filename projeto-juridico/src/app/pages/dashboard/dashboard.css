@@ -92,7 +92,7 @@
   background: #ffffff;
   border-radius: 10px;
   border: 1px solid #e5e7eb;      /* cinza claro, mais “premium” */
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   min-height: 520px;
