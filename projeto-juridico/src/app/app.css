@@ -7,14 +7,14 @@
   display: flex;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffffff;      /* fundo geral branco */
+  background-color: #626262;      /* fundo geral branco */
 }
 
 /* MENU LATERAL */
 .sidebar {
   width: 280px;
   background-color: #FFD2EC;      /* quase preto (muito chique) */
-  color: #f8fafc;                 /* texto branco soft */
+  color: #626262;                 /* texto branco soft */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 
 /* Links do menu */
 .nav-link {
-  color: #f8fafc;
+  color: #929292;
   text-decoration: none;
   display: block;
   padding: 12px;
@@ -68,6 +68,7 @@
   padding: 40px;
   position: relative;
   background: #ffffff;           /* garante fundo branco */
+  color: #626262;
 }
 
 /* BOTÕES NO CANTO SUPERIOR DIREITO */
