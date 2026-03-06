@@ -1,34 +1,35 @@
-/* =========================================================
-   LAYOUT GERAL (sidebar + main)
-   ========================================================= */
-
-/* Estrutura Geral */
 .app-container {
   display: flex;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #626262;      /* fundo geral branco */
+  background-color: #626262;     
 }
 
-/* MENU LATERAL */
+h3 {
+  color: #626262;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  opacity: 0.55;
+}
+
 .sidebar {
   width: 280px;
-  background-color: #FF4AB1;      /* quase preto (muito chique) */
-  color: #ffffff;                 /* texto branco soft */
+  background-color: #FF4AB1;     
+  color: #ffffff;               
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* TÍTULO DO MENU LATERAL */
+
 .sidebar h2 {
   font-size: 1.1rem;
-  opacity: 0.85;                  /* deixa mais elegante */
+  opacity: 0.85;                  
   margin-bottom: 20px;
 }
 
-/* Título de seção */
+
 .nav-section-title {
   opacity: 0.55;
   text-transform: uppercase;
@@ -36,7 +37,7 @@
   margin: 15px 0 5px 10px;
 }
 
-/* Links do menu */
+
 .nav-link {
   color: #ffffff;
   text-decoration: none;
@@ -46,14 +47,14 @@
   transition: 0.3s;
 }
 
-/* Hover do link do menu */
+
 .nav-link:hover {
-  background: #FFD2EC; /* hover bem leve */
+  background: #FFD2EC; 
 }
 
-/* Botão “novo” no sidebar */
+
 .btn-novo-sidebar {
-  background-color: #FFD2EC;      /* azul escuro */
+  background-color: #FFD2EC;      
   color: #000000;
   text-decoration: none;
   padding: 12px;
@@ -62,16 +63,16 @@
   font-weight: bold;
 }
 
-/* Conteúdo Principal */
+
 .main-content {
   flex: 1;
   padding: 40px;
   position: relative;
-  background: #ffffff;           /* garante fundo branco */
+  background: #ffffff;           
   color: #626262;
 }
 
-/* BOTÕES NO CANTO SUPERIOR DIREITO */
+
 .top-right-actions {
   position: absolute;
   top: 20px;
@@ -81,7 +82,7 @@
   z-index: 10;
 }
 
-/* Botão export */
+
 .btn-export {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -95,34 +96,34 @@
   transition: 0.2s;
 }
 
-/* Hover export */
+
 .btn-export:hover {
   background: #f8fafc;
   transform: scale(1.05);
 }
 
-/* Grid dos KPIs */
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* Card KPI (versão do dashboard) */
+
 .kpi-card {
   padding: 25px;
   border-radius: 12px;
   cursor: pointer;
-  color: #f8fafc;                 /* branco soft */
+  color: #f8fafc;                 
   transition: 0.3s;
 }
 
-/* Hover KPI */
+
 .kpi-card:hover {
   transform: translateY(-5px);
 }
 
-/* Bloco de ações + data */
+
 .top-right-actions{
   display:flex;
   align-items:center;
@@ -130,32 +131,31 @@
   justify-content: flex-end;
 }
 
-/* Texto “hoje” */
+
 .today{
   font-weight: 900;
   color:#A1A1A1;
   margin-right: 8px;
 }
 
-/* Select global (dropdown) */
+
 select {
   background-color: #ffffff;
   color: #0f172a;
-  border: 2px solid #828282;      /* cinza suave (sem azul gritante) */
+  border: 2px solid #828282;      
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* opção */
+
 select option {
   background-color: #ffffff;
   color: #000000;
 }
 
-/* hover opção (nem todos browsers aplicam) */
 select option:hover {
-  background-color: #DFDFDF;      /* azul escuro */
+  background-color: #DFDFDF;      
   color: #ffffff;
 }

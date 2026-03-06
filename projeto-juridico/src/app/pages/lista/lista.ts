@@ -24,17 +24,16 @@ export class ListaPageComponent {
   termo = '';
   filtroStatus: StatusFiltro = 'Todos';
 
-  // ordenação (requisito do enunciado)
+
   sortKey: 'numero' | 'cliente' | 'tipo' | 'status' | 'criadoEm' = 'criadoEm';
   sortDir: 'asc' | 'desc' = 'desc';
 
   constructor() {
-    // dados
+   
     this.processoService.processos$.subscribe(lista => {
       this.processos = lista;
     });
 
-    // lê query params para abrir já filtrado (menu/dashboard)
     this.route.queryParamMap.subscribe(params => {
       const s = params.get('status');
       if (s === 'Novo' || s === 'Ativo' || s === 'Concluído') this.filtroStatus = s;
@@ -45,12 +44,11 @@ export class ListaPageComponent {
   get listaFiltrada(): Processo[] {
     let lista = [...this.processos];
 
-    // filtro por status (pick list)
     if (this.filtroStatus !== 'Todos') {
       lista = lista.filter(p => p.status === this.filtroStatus);
     }
 
-    // pesquisa
+  
     const t = this.termo.trim().toLowerCase();
     if (t) {
       lista = lista.filter(p =>
@@ -60,7 +58,6 @@ export class ListaPageComponent {
       );
     }
 
-    // ordenação
     lista.sort((a, b) => {
       const av = a[this.sortKey] as any;
       const bv = b[this.sortKey] as any;
@@ -95,7 +92,6 @@ export class ListaPageComponent {
     }
   }
 
-  // indicador visual (requisito ngClass) — simples e direto
   statusClass(status: Processo['status']) {
     return {
       badge: true,

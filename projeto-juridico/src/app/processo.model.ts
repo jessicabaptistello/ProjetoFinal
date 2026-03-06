@@ -19,5 +19,3 @@ export interface Processo {
   
 
 } 
-//Retirei do HTML porque nao fazia sentido aparecer nos detalhes mas em caso de 
-// migração de base de dados ou mudança de numero de proc faz sentido ter e dai é só incluir

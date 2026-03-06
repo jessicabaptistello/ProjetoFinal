@@ -18,46 +18,18 @@ export class ProcessoService {
     if (dados) {
       const lista = JSON.parse(dados) as any[];
 
-      // ✅ migração: garante descricao mesmo para dados antigos
+
       const migrado: Processo[] = lista.map(item => ({
         ...item,
         descricao: item.descricao ?? '',
       }));
 
-      // opcional: regrava já migrado
+
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(migrado));
       return migrado;
     }
 
-    const seed: Processo[] = [
-      {
-        id: 1,
-        numero: '2026-001',
-        cliente: 'Arasaka Ltd',
-        tipo: 'Cível',
-        status: 'Novo',
-        descricao: 'Abertura de processo para triagem e recolha de documentação.',
-        criadoEm: new Date().toISOString(),
-      },
-      {
-        id: 2,
-        numero: '2026-002',
-        cliente: 'Michael Sullivan',
-        tipo: 'Criminal',
-        status: 'Ativo',
-        descricao: 'Processo em andamento com prazos e diligências.',
-        criadoEm: new Date().toISOString(), 
-      },
-      {
-        id: 3,
-        numero: '2026-003',
-        cliente: 'Weyland Corp',
-        tipo: 'Trabalhista',
-        status: 'Concluído',
-        descricao: 'Processo finalizado e encerrado após decisão.',
-       criadoEm: new Date().toISOString(), 
-      },
-    ];
+    const seed: Processo[] = [];
 
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(seed));
     return seed;

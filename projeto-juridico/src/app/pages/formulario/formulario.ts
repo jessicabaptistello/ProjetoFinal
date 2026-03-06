@@ -36,7 +36,6 @@ export class FormularioPageComponent {
   readonly tipos: TipoProcesso[] = ['Cível', 'Criminal', 'Trabalhista', 'Família', 'Fiscal', 'Outro'];
   readonly status: StatusProcesso[] = ['Novo', 'Ativo', 'Concluído'];
 
-  // ✅ inclui descricao
   readonly form = this.fb.nonNullable.group({
     cliente: ['', [Validators.required, Validators.minLength(3)]],
     numero: ['', [Validators.required, numeroProcessoValidator]],
@@ -82,7 +81,6 @@ export class FormularioPageComponent {
       return;
     }
 
-    // payload agora TEM descricao
     const payload = this.form.getRawValue();
 
     if (this.editId) {

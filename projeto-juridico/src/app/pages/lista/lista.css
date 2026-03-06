@@ -1,13 +1,9 @@
-/* =========================================================
-   TOOLBAR + TABELA (lista/filtro)
-   ========================================================= */
 
-/* Barra superior com filtros */
 .toolbar{
   background: #ffffff;
   border-radius: 15px;
   padding: 18px;
-  box-shadow: 0 5px 15px #828282; /* corrigido */
+  box-shadow: 0 5px 15px #828282;
   margin-bottom: 16px;
   display:flex;
   gap: 12px;
@@ -15,60 +11,60 @@
   flex-wrap: wrap;
 }
 
-/* Input de busca */
+
 .input{
   flex: 2;
   min-width: 220px;
   padding: 12px;
-  border: 1px solid #e5e7eb;      /* borda visível suave */
+  border: 1px solid #e5e7eb;      
   border-radius: 10px;
   background: #ffffff;
   color: #000000;
 }
 
-/* Select de filtro */
+
 .select{
   flex: 1;
   min-width: 160px;
   padding: 12px;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  background: #ffffff;            /* corrigido (antes estava inválido) */
+  background: #ffffff;            
   color: #000000;
 }
 
-/* Card container da tabela */
+
 .card{
-  background: #ffffff;            /* corrigido */
+  background: #ffffff;            
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 5px 15px #828282; /* corrigido */
+  box-shadow: 0 5px 15px #828282; 
 }
 
-/* Tabela base */
+
 .table{ width:100%; border-collapse: collapse; text-align:left; }
 
-/* Cabeçalho da tabela */
+
 .th{
   padding: 14px;
-  border-bottom: 2px solid #e5e7eb; /* separador suave */
+  border-bottom: 2px solid #e5e7eb; 
   color:#626262;
   cursor: pointer;
   user-select: none;
 }
 
-/* Linhas */
+
 .tr{ border-bottom: 1px solid #f1f5f9; }
 .td{ padding: 14px; }
 
-/* Link da tabela */
+
 .link{ color:#929292; text-decoration:none; font-weight:900; }
 .link:hover{ text-decoration:underline; }
 
-/* Ações na tabela */
+
 .actions{ display:flex; gap: 8px; }
 
-/* Botões na tabela */
+
 .btn{
   background: #C0C0C0;
   color:#ffffff;
@@ -80,14 +76,14 @@
   font-weight:900;
 }
 
-/* Botão pequeno */
+
 .btn.small{ padding: 6px 10px; border-radius: 8px; font-size: .85rem; }
 
-/* Variações (mantive, só deixei coerente na paleta) */
-.btn.editar{ background:#FFD2EC; }
-.btn.excluir { background:#C0C0C0; } /* “red” agora vira escuro (minimalista) */
 
-/* ===== Indicador visual (ngClass) ===== */
+.btn.editar{ background:#FFD2EC; }
+.btn.excluir { background:#C0C0C0; } 
+
+
 .badge{
   padding: 6px 12px;
   border-radius: 20px;
@@ -95,6 +91,7 @@
   font-weight: 900;
   display: inline-block;
 }
+
 .novo      { background: #ffffff; color: #FF2FA5; }
 .ativo     { background: #ffffff; color: #D880FF; }
 .concluido { background: #ffffff; color: #8bddac; }

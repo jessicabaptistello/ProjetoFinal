@@ -1,15 +1,10 @@
-
-/* =========================================================
-   CARD (1) - card genérico com header/grid/botões
-   ========================================================= */
 .card{
-  background: #ffffff;                              /* fundo branco */
-  border-radius: 18px;                              /* arredondado */
-  padding: 22px;                                    /* espaçamento interno */
-  box-shadow: 0 5px 15px #626262;        /* sombra soft (corrigida) */
+  background: #ffffff;                              
+  border-radius: 18px;                             
+  padding: 22px;                                    
+  box-shadow: 0 5px 15px #626262;       
 }
 
-/* Header do card: título + ações */
 .header{
   display:flex;
   justify-content: space-between;
@@ -18,10 +13,8 @@
   margin-bottom: 16px;
 }
 
-/* Texto “muted” (secundário) */
 .muted{ color:#A1A1A1; font-weight:600; }
 
-/* Grid interno (2 colunas) */
 .grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
@@ -31,20 +24,17 @@
   .grid{ grid-template-columns: 1fr; }
 }
 
-/* Área de ações (botões lado a lado) */
 .actions{ display:flex; gap: 10px; }
 
-/* Botão base (versão clara) */
 .btn{
-  background:#FFD2EC;          /* cinza bem claro */
+  background:#FFD2EC;         
   border:none;
   padding: 10px 14px;
   border-radius: 10px;
   cursor:pointer;
   text-decoration:none;
-  color:#000000;               /* quase preto */
+  color:#000000;               
   font-weight:700;
 }
 
-/* Botão azul (destaque) */
 .btn.editar{ background:#C0C0C0; color:#000000; }

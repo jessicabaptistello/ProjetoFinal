@@ -15,6 +15,3 @@ export class SaudacaoPipe implements PipeTransform {
     return `${msg}, ${nome}`;
   }
 }
-
-//Pipe Customizada: saudação, aparece bom dia, boa tarde, boa noite (de acordo com a hora) 
-//quando abrimos o browser
