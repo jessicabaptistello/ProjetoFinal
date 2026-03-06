@@ -64,11 +64,43 @@
 /* Mantém as cores “clássicas” e estáveis
    - Eu deixei em tons da mesma família (azul/escuro/cinza)
    - Você altera: background para variar o “tema” de cada KPI */
-.kpi-blue   { background: #C0C0C0; } /* azul escuro soft */
-.kpi-green  { background: #FFD2EC; } /* quase preto (chique) */
-.kpi-orange { background: #FFD2EC; } /* cinza escuro */
-.kpi-dark   { background: #FFD2EC; } /* cinza-azulado */
+.kpi-blue   { background: #FF73C3; } /* azul escuro soft */
+.kpi-green  { background: #FF73C3; } /* quase preto (chique) */
+.kpi-orange { background: #FF73C3; } /* cinza escuro */
+.kpi-dark   { background: #FF73C3; } /* cinza-azulado */
 
+/* card do ultimo processo */
+.destaque{
+  margin-top:25px;
+  margin-bottom:25px;
+  padding:20px;
+  color:#626262;
+  background:#ffffff;
+  border-radius:10px;
+  border-left: solid #C0C0C0;
+  border-right:solid #C0C0C0;
+}
+
+
+/* layout das infos */
+.destaque-info{
+  display:flex;
+  gap:30px;
+  margin-top:20px;
+}
+
+
+/* botão detalhe */
+.btn-detalhe{
+  display: flex;
+  margin-top:20px;
+  margin-bottom:20px;
+  padding:8px 14px;
+  background:#FF73C3;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
 
 /* =========================
    3 colunas

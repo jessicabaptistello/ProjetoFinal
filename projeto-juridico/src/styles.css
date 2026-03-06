@@ -3,3 +3,22 @@
 body {
     margin: 0; 
 }
+
+/* select dentro da area de filtro */
+
+.filter select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #929292;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* estilo quando o select está ativo */
+
+.filter select:focus {
+  border-color: #DFDFDF;
+}

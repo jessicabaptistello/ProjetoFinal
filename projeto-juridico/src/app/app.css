@@ -13,8 +13,8 @@
 /* MENU LATERAL */
 .sidebar {
   width: 280px;
-  background-color: #FFD2EC;      /* quase preto (muito chique) */
-  color: #626262;                 /* texto branco soft */
+  background-color: #FF4AB1;      /* quase preto (muito chique) */
+  color: #ffffff;                 /* texto branco soft */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 
 /* Links do menu */
 .nav-link {
-  color: #929292;
+  color: #ffffff;
   text-decoration: none;
   display: block;
   padding: 12px;
@@ -53,8 +53,8 @@
 
 /* Botão “novo” no sidebar */
 .btn-novo-sidebar {
-  background-color: #C0C0C0;      /* azul escuro */
-  color: #ffffff;
+  background-color: #FFD2EC;      /* azul escuro */
+  color: #000000;
   text-decoration: none;
   padding: 12px;
   border-radius: 8px;

@@ -30,7 +30,7 @@
    - Paleta: azul/escuro suave + variações em cinza-azulado
    - Você altera: background para outros tons
    ========================================================= */
-.bg-blue   { background: #FFD2EC; }  /* azul escuro elegante */
-.bg-green  { background: #FF80C9; }  /* cinza escuro (mantém “seriedade”) */
-.bg-orange { background: #FF65BD }  /* quase preto (minimalista) */
-.bg-gray   { background: #FF4AB1; }  /* cinza-azulado */
+.bg-blue   { background: #FF65BD; }  /* azul escuro elegante */
+.bg-green  { background: #FF65BD; }  /* cinza escuro (mantém “seriedade”) */
+.bg-orange { background: #FF65BD; }  /* quase preto (minimalista) */
+.bg-gray   { background: #FF65BD; }  /* cinza-azulado */

@@ -24,6 +24,28 @@
   </div>
 </section>
 
+<!-- destaque do último processo criado -->
+<section class="card destaque" *ngIf="ultimoProcesso">
+  <h2>Último processo adicionado</h2>
+  <div class="destaque-info">
+    <div>
+      <strong>Cliente:</strong>
+      {{ ultimoProcesso.cliente }}
+    </div>
+    <div>
+      <strong>Tipo:</strong>
+      {{ ultimoProcesso.tipo }}
+    </div>
+    <div>
+      <strong>Status:</strong>
+      {{ ultimoProcesso.status }}
+    </div>
+  </div>
+  <a class="row-link" [routerLink]="['/detalhe', ultimoProcesso.id]">
+     Detalhe
+  </a>
+</section>
+
 <section class="columns">
   <!-- NOVOS -->
   <article class="col-card">
