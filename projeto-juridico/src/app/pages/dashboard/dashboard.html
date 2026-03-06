@@ -2,13 +2,13 @@
   <div class="kpi kpi-blue">
     <div class="kpi-title">TOTAL DE PROCESSOS</div>
     <div class="kpi-value">{{ total }}</div>
-    <div class="kpi-sub">Soma total registada</div>
+  <!--  <div class="kpi-sub">Soma total registada</div> -->
   </div>
 
   <div class="kpi kpi-green">
     <div class="kpi-title">NOVOS PROCESSOS</div>
     <div class="kpi-value">{{ novos }}</div>
-    <div class="kpi-sub">Aguardando triagem</div>
+    <div class="kpi-sub">Aguardando distribuição</div>
   </div>
 
   <div class="kpi kpi-orange">
@@ -18,7 +18,7 @@
   </div>
 
   <div class="kpi kpi-dark">
-    <div class="kpi-title">CONCLUÍDOS</div>
+    <div class="kpi-title"> PROCESSOS CONCLUÍDOS</div>
     <div class="kpi-value">{{ concluidos }}</div>
     <div class="kpi-sub">Finalizados</div>
   </div>
@@ -41,9 +41,7 @@
       {{ ultimoProcesso.status }}
     </div>
   </div>
-  <a class="row-link" [routerLink]="['/detalhe', ultimoProcesso.id]">
-     Detalhe
-  </a>
+  <a class="row-link" [routerLink]="['/detalhe', ultimoProcesso.id]">Detalhe</a>
 </section>
 
 <section class="columns">
@@ -56,11 +54,11 @@
 
         <span class="tip">
           <span class="tip-icon">i</span>
-          <span class="tip-bubble">Processos recém-criados e ainda não iniciados.</span>
+          <span class="tip-bubble">Processos ainda em prospecção ou à aguardar distribuiçao</span>
         </span>
       </div>
 
-      <div class="col-right">Recentes</div>
+      <!-- <div class="col-right">Recentes</div> -->
     </header>
 
     <div class="col-body">
@@ -96,7 +94,7 @@
         </span>
       </div>
 
-      <div class="col-right">Em curso</div>
+     <!-- <div class="col-right">Em andamento</div> -->
     </header>
 
     <div class="col-body">
@@ -128,11 +126,11 @@
 
         <span class="tip">
           <span class="tip-icon">i</span>
-          <span class="tip-bubble">Processos finalizados e encerrados.</span>
+          <span class="tip-bubble">Processos finalizados ou arquivados.</span>
         </span>
       </div>
 
-      <div class="col-right">Finalizados</div>
+    <!--  <div class="col-right">Finalizados</div> -->
     </header>
 
     <div class="col-body">

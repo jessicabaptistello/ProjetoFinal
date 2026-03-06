@@ -36,7 +36,7 @@
 
 /* Botão base (versão clara) */
 .btn{
-  background:#f8fafc;          /* cinza bem claro */
+  background:#FFD2EC;          /* cinza bem claro */
   border:none;
   padding: 10px 14px;
   border-radius: 10px;
@@ -47,5 +47,5 @@
 }
 
 /* Botão azul (destaque) */
-.btn.blue{ background:#626262; color:#ffffff; }
+.btn.blue{ background:#C0C0C0; color:#000000; }
 
