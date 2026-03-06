@@ -1,0 +1,40 @@
+.card{
+  background: #ffffff;                              
+  border-radius: 18px;                             
+  padding: 22px;                                    
+  box-shadow: 0 5px 15px #626262;       
+}
+
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.muted{ color:#A1A1A1; font-weight:600; }
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+@media (max-width: 700px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.actions{ display:flex; gap: 10px; }
+
+.btn{
+  background:#FFD2EC;         
+  border:none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#000000;               
+  font-weight:700;
+}
+
+.btn.editar{ background:#C0C0C0; color:#000000; }

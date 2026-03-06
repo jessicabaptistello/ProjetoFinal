@@ -1,0 +1,60 @@
+.card{
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #626262; 
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+label{
+  display:block;
+  margin-top: 14px;
+  font-weight: 800;
+  color:#000000;
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;   
+  border-radius: 12px;
+  margin-top: 6px;
+  background: #ffffff;
+  resize: vertical;
+  color: #000000;
+}
+
+.invalid{
+  border-color: #d11616 !important;              
+  box-shadow: 0 0 0 2px #626262; 
+}
+
+
+.error{
+  color:#d11616;             
+  font-weight: 700;
+  display:block;
+  margin-top: 6px;
+  opacity: .75;             
+}
+
+
+.actions{
+  display:flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn{
+  background:#DFDFDF;     
+  border:none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#000000;
+  font-weight:800;
+  flex:1;
+  text-align:center;
+}

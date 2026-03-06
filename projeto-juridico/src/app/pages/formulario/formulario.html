@@ -1,0 +1,41 @@
+<div class="card">
+  <h2>{{ editId ? 'Editar Processo' : 'Novo Processo' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label>Cliente *</label>
+    <input formControlName="cliente" [class.invalid]="campoInvalido('cliente')" placeholder="Nome do cliente" />
+    <small class="error" *ngIf="campoInvalido('cliente')">Cliente é obrigatório (mín. 3 caracteres).</small>
+
+    <label>Número *</label>
+    <input formControlName="numero" [class.invalid]="campoInvalido('numero')" placeholder="2026-001" />
+    <small class="error" *ngIf="erroNumero() as msg">{{ msg }}</small>
+
+    <label>Tipo *</label>
+    <select formControlName="tipo" [class.invalid]="campoInvalido('tipo')">
+      <option *ngFor="let t of tipos" [value]="t">{{ t }}</option>
+    </select>
+    <small class="error" *ngIf="campoInvalido('tipo')">Tipo é obrigatório.</small>
+
+    <label>Status *</label>
+    <select formControlName="status" [class.invalid]="campoInvalido('status')">
+      <option *ngFor="let s of status" [value]="s">{{ s }}</option>
+    </select>
+    <small class="error" *ngIf="campoInvalido('status')">Status é obrigatório.</small>
+
+    <label>Descrição *</label>
+    <textarea
+      formControlName="descricao"
+      [class.invalid]="campoInvalido('descricao')"
+      rows="4"
+      placeholder="Descreva brevemente o processo..."
+    ></textarea>
+    <small class="error" *ngIf="campoInvalido('descricao')">
+      Descrição é obrigatória (mín. 10 caracteres).
+    </small>
+
+    <div class="actions">
+      <button type="submit" class="btn editar">{{ editId ? 'Guardar' : 'Criar' }}</button>
+      <a class="btn" routerLink="/lista">Cancelar</a>
+    </div>
+  </form>
+</div>

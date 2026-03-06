@@ -1,0 +1,56 @@
+<div class="app-container">
+  <aside class="sidebar">
+    <h2>Gestão de Processos</h2>
+    <a routerLink="/novo-processo" class="btn-novo-sidebar">+ Novo Processo</a>
+
+    <nav>
+      <small class="nav-section-title">Menu</small>
+
+      <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">HomePage</a>
+
+      <a routerLink="/lista" class="nav-link" routerLinkActive="active">Todos os Processos</a>
+
+      <a
+        [routerLink]="['/lista']"
+        [queryParams]="{ status: 'Novo' }"
+        class="nav-link"
+        routerLinkActive="active"
+      >
+        Novos Processos
+      </a>
+
+      <a
+        [routerLink]="['/lista']"
+        [queryParams]="{ status: 'Ativo' }"
+        class="nav-link"
+        routerLinkActive="active"
+      >
+        Processos Ativos
+      </a>
+
+      <a
+        [routerLink]="['/lista']"
+        [queryParams]="{ status: 'Concluído' }"
+        class="nav-link"
+        routerLinkActive="active"
+      >
+       Processos Concluídos
+      </a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="top-right-actions">
+      <div class="today">{{ dataDeHoje }}</div>
+      <button (click)="exportarJSON()" class="btn-export">JSON</button>
+      <button (click)="exportarExcel()" class="btn-export">EXCEL</button>
+    </div>
+
+    <header style="margin-bottom: 30px;">
+      <h1>{{ nomeUsuario | saudacao }}</h1>
+       <h3> Bem  vinda, a página de gestão de processos que são administrados por si.</h3>
+    </header>
+
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,26 @@
+<div class="card" *ngIf="processo as p; else naoEncontrado">
+  <div class="header">
+    <div>
+      <h2>Detalhe do Processo</h2>
+    </div>
+    <div class="actions">
+      <a class="btn editar" [routerLink]="['/editar', p.id]">Editar</a>
+      <a class="btn" routerLink="/lista">Voltar</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div><strong>Número:</strong> {{ p.numero }}</div>
+    <div><strong>Cliente:</strong> {{ p.cliente }}</div>
+    <div><strong>Tipo:</strong> {{ p.tipo }}</div>
+    <div><strong>Status:</strong> <app-status-badge [status]="p.status"></app-status-badge></div>
+    <div><strong>Descrição:</strong> {{ p.descricao }}</div>
+  </div>
+</div>
+
+<ng-template #naoEncontrado>
+  <div class="card">
+    <h2>Processo não encontrado</h2>
+    <a class="btn" routerLink="/lista">Voltar</a>
+  </div>
+</ng-template>

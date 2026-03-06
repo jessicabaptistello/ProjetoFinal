@@ -1,0 +1,22 @@
+.kpi-card {
+  color: #f8fafc;                 
+  border-radius: 18px;            
+  padding: 18px;                  
+  display: block;                
+  text-decoration: none;          
+}
+
+
+.kpi-card h2 { 
+  font-size: 2.5rem; 
+  margin: 10px 0; 
+}
+
+.kpi-card span { 
+  opacity: .9; 
+  font-weight: 600; 
+}
+
+.bg-total { background: #FF65BD; }  
+.bg-novo { background: #FF65BD; }  
+.bg-concluido { background: #FF65BD; }  
