@@ -4,7 +4,7 @@ body {
     margin: 0; 
 }
 
-/* select dentro da area de filtro */
+/* select dentro da area de filtro 
 
 .filter select {
   padding: 0.5rem 1rem;
@@ -17,8 +17,12 @@ body {
 }
 
 
-/* estilo quando o select está ativo */
+/* estilo quando o select está ativo 
 
 .filter select:focus {
+  all: unset;
+  background-color: #FFD2EC;
   border-color: #DFDFDF;
 }
+
+*/

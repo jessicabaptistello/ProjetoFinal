@@ -15,7 +15,7 @@ export class AppComponent {
   private readonly processoService = inject(ProcessoService);
 
   dataDeHoje: string = new Date().toLocaleDateString('pt-PT');
-  nomeUsuario: string = 'Jessica';
+  nomeUsuario: string = 'Jessica!';
 
   exportarJSON() {
     const blob = this.processoService.exportarJsonBlob();

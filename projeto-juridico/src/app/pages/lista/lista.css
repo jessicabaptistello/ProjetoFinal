@@ -84,8 +84,8 @@
 .btn.small{ padding: 6px 10px; border-radius: 8px; font-size: .85rem; }
 
 /* Variações (mantive, só deixei coerente na paleta) */
-.btn.blue{ background:#FFD2EC; }
-.btn.red { background:#C0C0C0; } /* “red” agora vira escuro (minimalista) */
+.btn.editar{ background:#FFD2EC; }
+.btn.excluir { background:#C0C0C0; } /* “red” agora vira escuro (minimalista) */
 
 /* ===== Indicador visual (ngClass) ===== */
 .badge{

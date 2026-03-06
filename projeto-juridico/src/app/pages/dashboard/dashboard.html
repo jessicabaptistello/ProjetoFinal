@@ -1,23 +1,23 @@
 <section class="kpi-row">
-  <div class="kpi kpi-blue">
+  <div class="kpi kpi-total">
     <div class="kpi-title">TOTAL DE PROCESSOS</div>
     <div class="kpi-value">{{ total }}</div>
   <!--  <div class="kpi-sub">Soma total registada</div> -->
   </div>
 
-  <div class="kpi kpi-green">
+  <div class="kpi kpi-novo">
     <div class="kpi-title">NOVOS PROCESSOS</div>
     <div class="kpi-value">{{ novos }}</div>
     <div class="kpi-sub">Aguardando distribuição</div>
   </div>
 
-  <div class="kpi kpi-orange">
+  <div class="kpi kpi-ativo">
     <div class="kpi-title">PROCESSOS ATIVOS</div>
     <div class="kpi-value">{{ ativos }}</div>
     <div class="kpi-sub">Em andamento</div>
   </div>
 
-  <div class="kpi kpi-dark">
+  <div class="kpi kpi-concluido">
     <div class="kpi-title"> PROCESSOS CONCLUÍDOS</div>
     <div class="kpi-value">{{ concluidos }}</div>
     <div class="kpi-sub">Finalizados</div>
@@ -49,7 +49,7 @@
   <article class="col-card">
     <header class="col-header">
       <div class="col-left">
-        <span class="dot dot-green"></span>
+        <span class="dot dot-novoCard"></span>
         <h3>Novos</h3>
 
         <span class="tip">
@@ -65,7 +65,7 @@
       <div class="empty" *ngIf="processosNovos.length === 0">Sem processos novos.</div>
 
       <div class="row" *ngFor="let p of processosNovos | slice:0:3">
-        <div class="bar bar-green"></div>
+        <div class="bar bar-novoCard"></div>
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">
@@ -85,7 +85,7 @@
   <article class="col-card">
     <header class="col-header">
       <div class="col-left">
-        <span class="dot dot-blue"></span>
+        <span class="dot dot-ativoCard"></span>
         <h3>Ativos</h3>
 
         <span class="tip">
@@ -101,7 +101,7 @@
       <div class="empty" *ngIf="processosAtivos.length === 0">Sem processos ativos.</div>
 
       <div class="row" *ngFor="let p of processosAtivos | slice:0:3">
-        <div class="bar bar-blue"></div>
+        <div class="bar bar-ativoCard"></div>
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">
@@ -121,7 +121,7 @@
   <article class="col-card">
     <header class="col-header">
       <div class="col-left">
-        <span class="dot dot-gray"></span>
+        <span class="dot dot-concluidoCard"></span>
         <h3>Concluídos</h3>
 
         <span class="tip">
@@ -137,7 +137,7 @@
       <div class="empty" *ngIf="processosConcluidos.length === 0">Sem processos concluídos.</div>
 
       <div class="row" *ngFor="let p of processosConcluidos | slice:0:3">
-        <div class="bar bar-gray"></div>
+        <div class="bar bar-concluidoCard"></div>
         <div class="row-content">
           <div class="row-title">Processo #{{ p.numero }}</div>
           <div class="row-sub">

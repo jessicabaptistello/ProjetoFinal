@@ -64,10 +64,10 @@
 /* Mantém as cores “clássicas” e estáveis
    - Eu deixei em tons da mesma família (azul/escuro/cinza)
    - Você altera: background para variar o “tema” de cada KPI */
-.kpi-blue   { background: #FF73C3; } /* azul escuro soft */
-.kpi-green  { background: #FF73C3; } /* quase preto (chique) */
-.kpi-orange { background: #FF73C3; } /* cinza escuro */
-.kpi-dark   { background: #FF73C3; } /* cinza-azulado */
+.kpi-total   { background: #FF73C3; } /* azul escuro soft */
+.kpi-novo  { background: #FF73C3; } /* quase preto (chique) */
+.kpi-ativo { background: #FF73C3; } /* cinza escuro */
+.kpi-concluido   { background: #FF73C3; } /* cinza-azulado */
 
 /* card do ultimo processo */
 .destaque{
@@ -176,9 +176,9 @@
 
 /* Cores dos dots (apenas azul/cinza/preto)
    - Você altera: background */
-.dot-green{ background:#FF2FA5; } /* substitui “verde” por escuro chique */
-.dot-blue { background:#D880FF; } /* azul */
-.dot-gray { background:#8bddac; } /* cinza */ 
+.dot-novoCard { background:#FF2FA5; } /* substitui “verde” por escuro chique */
+.dot-ativoCard { background:#D880FF; } /* azul */
+.dot-concluidoCard { background:#8bddac; } /* cinza */ 
 
 /* Corpo do card (lista de itens)
    - Você altera: padding e gap */
@@ -217,9 +217,9 @@
   height: 44px;
   border-radius: 10px;
 }
-.bar-green{ background:#FF2FA5; }  /* escuro */
-.bar-blue { background:#D880FF; }  /* azul */
-.bar-gray { background:#8bddac; }  /* cinza */
+.bar-novoCard { background:#FF2FA5; }  /* escuro */
+.bar-ativoCard { background:#D880FF; }  /* azul */
+.bar-concluidoCard { background:#8bddac; }  /* cinza */
 
 /* Conteúdo da linha
    - Visual: “cardzinho” claro */

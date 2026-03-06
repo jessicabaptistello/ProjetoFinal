@@ -34,8 +34,8 @@
           <span [ngClass]="statusClass(item.status)">{{ item.status }}</span>
         </td>
         <td class="td actions">
-          <a [routerLink]="['/editar', item.id]" class="btn small blue">Editar</a>
-          <button (click)="excluir(item.id)" class="btn small red">Excluir</button>
+          <a [routerLink]="['/editar', item.id]" class="btn small editar">Editar</a>
+          <button (click)="excluir(item.id)" class="btn small excluir">Excluir</button>
         </td>
       </tr>
 

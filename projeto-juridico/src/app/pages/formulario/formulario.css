@@ -66,9 +66,9 @@ input, select, textarea{
   text-align:center;
 }
 
-/* Botão azul do form */
-.btn.blue{
- background:#DFDFDF;        /* cinza claro */
+/* Botão azul do form 
+.btn.segundoCard{
+ background:#DFDFDF;       
   border:none;
   padding: 12px 14px;
   border-radius: 12px;
@@ -78,4 +78,4 @@ input, select, textarea{
   font-weight:800;
   flex:1;
   text-align:center;
-}
+} */

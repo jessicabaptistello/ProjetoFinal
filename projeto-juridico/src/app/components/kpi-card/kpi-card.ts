@@ -14,5 +14,5 @@ export class KpiCardComponent {
   @Input({ required: true }) value!: number;
   @Input() subtitle = '';
   @Input() link: any[] | string = '/';
-  @Input() bgClass: 'bg-blue' | 'bg-green' | 'bg-orange' | 'bg-gray' = 'bg-blue';
+  @Input() bgClass: 'bg-total' | 'bg-novo' | 'bg-ativo' | 'bg-concluido' = 'bg-total';
 }
