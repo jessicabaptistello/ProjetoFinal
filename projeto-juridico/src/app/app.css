@@ -48,7 +48,7 @@
 
 /* Hover do link do menu */
 .nav-link:hover {
-  background: #DFDFDF; /* hover bem leve */
+  background: #FFD2EC; /* hover bem leve */
 }
 
 /* Botão “novo” no sidebar */
@@ -133,7 +133,7 @@
 /* Texto “hoje” */
 .today{
   font-weight: 900;
-  color:#64748b;
+  color:#A1A1A1;
   margin-right: 8px;
 }
 
