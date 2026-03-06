@@ -22,11 +22,11 @@ jobs:
         run: npm install
 
       - name: Build the Angular App
-        run: npm run build -- --base-href=/projeto-juridico/
+        run: npm run build -- --base-href=/ProjetoFinal/
 
       - name: Fix index.html and 404 routing for GitHub Pages
         run: |
-          cd ./dist/projeto-juridico/browser
+          cd ./dist/ProjetoFinal/browser
           cp index.csr.html index.html
           cp index.html 404.html
 
@@ -34,4 +34,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/projeto-juridico/browser
+          publish_dir: ./dist/ProjetoFinal/browser
