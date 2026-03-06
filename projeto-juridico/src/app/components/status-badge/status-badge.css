@@ -15,5 +15,5 @@
    - Fundo branco com texto azul/cinza suave (clean)
    - Você altera: color (texto) e background */
 .novo      { background: #ffffff; color: #FF2FA5; } /* azul vivo porém moderno */
-.ativo     { background: #ffffff; color: #FF80C9; } /* azul um pouco mais fechado */
-.concluido { background: #ffffff; color: #8bddac; } /* quase preto (finalizado) */
+.ativo     { background: #ffffff; color: #D880FF; } /* azul um pouco mais fechado */
+.concluido { background: #ffffff; color: #D880FF } /* quase preto (finalizado) */

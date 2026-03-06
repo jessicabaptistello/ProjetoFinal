@@ -177,7 +177,7 @@
 /* Cores dos dots (apenas azul/cinza/preto)
    - Você altera: background */
 .dot-green{ background:#FF2FA5; } /* substitui “verde” por escuro chique */
-.dot-blue { background:#FF80C9; } /* azul */
+.dot-blue { background:#D880FF; } /* azul */
 .dot-gray { background:#8bddac; } /* cinza */ 
 
 /* Corpo do card (lista de itens)
@@ -218,7 +218,7 @@
   border-radius: 10px;
 }
 .bar-green{ background:#FF2FA5; }  /* escuro */
-.bar-blue { background:#FF80C9; }  /* azul */
+.bar-blue { background:#D880FF; }  /* azul */
 .bar-gray { background:#8bddac; }  /* cinza */
 
 /* Conteúdo da linha
