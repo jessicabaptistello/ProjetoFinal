@@ -25,6 +25,6 @@ jobs:
         run: npm run build -- --base-href "https://jessicabaptistello.github.io/ProjetoFinal/"
 
       - name: Deploy to GitHub Pages
-        uses: jessicabaptistello/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/projeto-juridico/browser
