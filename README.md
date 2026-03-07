@@ -158,13 +158,23 @@ src/
 
 ## 📌 Estado do Projeto
 
-Em desenvolvimento / Concluído
+Em desenvolvimento 
+
+---
+
+## Funções à implementar no futuro:
+
+* Autenticação na página inicial
+* Perfil diferenciado para Advogado e Estagiario, sendo este último sem permissão para excluir processos ou editar alguns campos
+* Opção de andamentos ao processo (fase à fase) sem ser apenas na descrição
+* Opção de agenda de compromisso, como por exemplo, audiências
 
 ---
 
 ##  Licença
 
 Projeto académico desenvolvido no âmbito da UFCD Programação JavaScript.
+
 
 
 
