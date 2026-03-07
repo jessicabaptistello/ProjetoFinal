@@ -1,13 +1,13 @@
-# ⚖️ Projeto Final - Gestão de Processos Jurídicos
+#  Projeto Final - Gestão de Processos Jurídicos
 
-**Aluno:** Jessica de Araujo Baptistello
+**Aluno:** Jessica Baptistello
 **UFCD:** Programação JavaScript
 **Framework:** Angular
 **Linguagem:** TypeScript
 
 ---
 
-## 🧠 Descrição
+##  Descrição
 
 Este projeto consiste numa **Single Page Application (SPA)** desenvolvida em Angular, que simula um sistema de **Gestão de Processos Jurídicos**.
 
@@ -17,9 +17,9 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
-### 📊 Dashboard
+###  Dashboard
 
 * Total de processos registados
 * Total de processos ativos
@@ -28,7 +28,7 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-### 📋 Listagem de Processos
+###  Listagem de Processos
 
 * Lista dinâmica com `*ngFor`
 * Filtro por estado (Ativo / Concluído / Suspenso)
@@ -38,7 +38,7 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-### 🔎 Detalhe do Processo
+###  Detalhe do Processo
 
 * Rota dinâmica `/detalhe/:id`
 * Informação completa do processo:
@@ -52,7 +52,7 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-### 📝 Criação e Edição
+###  Criação e Edição
 
 * Uso de **Reactive Forms**
 * Campos obrigatórios:
@@ -67,7 +67,7 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-### 💾 Persistência de Dados
+###  Persistência de Dados
 
 * Armazenamento em **LocalStorage**
 * CRUD completo:
@@ -80,7 +80,7 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 * Angular (v20+)
 * TypeScript (Strict Mode)
@@ -91,8 +91,12 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 * Reactive Forms
 
 ---
+Link para o GitHub Pages: 
+https://jessicabaptistello.github.io/ProjetoFinal/
 
-## 📦 Instalação e Execução
+---
+
+##  Instalação e Execução
 
 ### 1️⃣ Clonar repositório
 
@@ -124,7 +128,7 @@ http://localhost:4200/
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 src/
 ├── app/
@@ -138,7 +142,7 @@ src/
 
 ---
 
-## ✅ Requisitos Técnicos Implementados
+##  Requisitos Técnicos Implementados
 
 ✔️ Interfaces tipadas (sem `any`)
 ✔️ Services com Injeção de Dependência
@@ -156,7 +160,8 @@ Em desenvolvimento / Concluído
 
 ---
 
-## 📄 Licença
+##  Licença
 
 Projeto académico desenvolvido no âmbito da UFCD Programação JavaScript.
+
 
