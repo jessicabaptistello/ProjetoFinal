@@ -32,8 +32,8 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
 
 * Lista dinâmica com `*ngFor`
 * Filtro por estado (Novos / Ativos / Concluídos )
-* Pesquisa por nome do cliente ou nº do processo
-* Ordenação por data ou prioridade
+* Pesquisa por nome do cliente ou nº do processo ou tipo
+* Ordenação por data 
 * Indicadores visuais com `ngClass`
 
 ---
@@ -63,9 +63,10 @@ O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentiza�
     
 * Validação adicional:
 
-  * Email válido ou formato do processo
+* Formato do número do processo
 * Feedback visual de erro nos inputs
 * Descrição com pelo menos 10 caracteres
+* Campos obrigatórios
 
 ---
 
@@ -174,6 +175,7 @@ Em desenvolvimento
 ##  Licença
 
 Projeto académico desenvolvido no âmbito da UFCD Programação JavaScript.
+
 
 
 
