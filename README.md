@@ -1,9 +1,9 @@
-#  Projeto Final - Gestão de Processos Jurídicos
+# Projeto Final - Gestão de Processos Jurídicos
 
-**Aluno:** Jessica Baptistello
-**UFCD:** Programação JavaScript
-**Framework:** Angular
-**Linguagem:** TypeScript
+Aluno: Jessica Baptistello  
+UFCD: Programação JavaScript  
+Framework: Angular  
+Linguagem: TypeScript
 
 ---
 
@@ -11,7 +11,7 @@
 
 Este projeto consiste numa **Single Page Application (SPA)** desenvolvida em Angular, que simula um sistema pessoal de **Gestão de Processos Jurídicos e Administrativos**.
 
-A aplicação permite registar, visualizar, editar e remover processos jurídicos e administrativos, facilitando a organização e acompanhamento de da situação dos clientes.
+A aplicação permite registar, visualizar, editar e remover processos jurídicos e administrativos, facilitando a organização e acompanhamento da situação dos clientes.
 
 O sistema foi desenvolvido seguindo boas práticas de arquitetura, componentização e separação de responsabilidades, com tipagem em TypeScript e utilização de Services para gestão de estado e persistência de dados.
 
@@ -174,6 +174,7 @@ Em desenvolvimento
 ##  Licença
 
 Projeto académico desenvolvido no âmbito da UFCD Programação JavaScript.
+
 
 
 
